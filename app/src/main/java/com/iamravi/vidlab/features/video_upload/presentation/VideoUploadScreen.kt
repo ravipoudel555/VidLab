@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.iamravi.vidlab.features.video_player.presentation.VideoPreviewPlayer
 import com.iamravi.vidlab.features.video_upload.presentation.viewmodel.VideoUploadViewModel
 
 @Composable
@@ -49,6 +50,11 @@ fun VideoUploadScreen(viewModel: VideoUploadViewModel = hiltViewModel()) {
 
         videoFile?.let { file ->
             Text("Copied to cache: ${file.absolutePath}")
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Preview player
+            VideoPreviewPlayer(videoFile = file)
         }
 
         errorMessage?.let { msg ->
