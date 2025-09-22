@@ -64,10 +64,14 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     kapt(libs.hilt.compiler)
 
+
+
     // Media3 dependencies
     implementation(libs.media3.exoplayer)
     implementation(libs.media3.ui)
     implementation(libs.media3.session)
 
+    // Mp4Composer for advanced video editing (trimming, overlays, filters, music)
+    implementation("com.github.MasayukiSuda:Mp4Composer-android:v0.4.1")
 
 }
